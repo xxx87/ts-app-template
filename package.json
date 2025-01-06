@@ -1,0 +1,44 @@
+{
+  "name": "typescript-app-template",
+  "version": "1.0.0",
+  "author": "Illia Isaev",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon",
+    "lint": "eslint 'src/**/*.{js,ts}'",
+    "prettier": "prettier . --write",
+    "build": "tsc -p . && tsc-alias",
+    "watch": "tsc -w",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.4",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.1",
+    "@types/cls-hooked": "^4.3.9",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.11.24",
+    "@types/winston": "^2.4.4",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.17.0",
+    "eslint-plugin-import": "^2.31.0",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^8.19.0"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "dependencies": {
+    "cls-hooked": "^4.2.2",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "winston": "^3.17.0"
+  }
+}

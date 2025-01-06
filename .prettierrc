@@ -1,0 +1,32 @@
+{
+  "overrides": [
+    {
+      "files": ["src/**/*.json", "src/**/*.md", "src/**/*.js"],
+      "options": {
+        "singleQuote": false,
+        "printWidth": 120,
+        "bracketSpacing": false
+      }
+    }
+  ],
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^dotenv/(.*)$",
+    "^express$",
+    "^express/(.*)$",
+    "^axios$",
+    "^date-fns$",
+    "^firebase-admin$",
+    "^firebase-admin/(.*)$",
+    "<THIRD_PARTY_MODULES>",
+    "^@config$",
+    "^@data$",
+    "^@data/(.*)$",
+    "^@dataTypes/(.*)$",
+    "^@constants/(.*)$",
+    "^@utils/(.*)$",
+    "^@integrations/(.*)$",
+    "^@sportsFactory$",
+    "^[./]"
+  ]
+}

@@ -1,0 +1,9 @@
+.idea
+build
+node_modules
+.eslintrc.js
+.prettierrc
+nodemon.json
+package.json
+README.md
+tsconfig.json
