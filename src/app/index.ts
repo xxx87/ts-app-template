@@ -41,13 +41,16 @@ export const createApp = async (appConfig: AppConfig): Promise<Express> => {
   });
 
   app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Methods", appConfig.cors.allowedMethods.join(", "));
+    res.header(
+      "Access-Control-Allow-Methods",
+      appConfig.cors.allowedMethods.join(", "),
+    );
 
     res.header("Access-Control-Allow-Credentials", "true");
     res.header("Access-Control-Expose-Headers", "Set-Cookie");
     res.header(
       "Access-Control-Allow-Headers",
-      "Content-Type, Content-Length, Cookie, Host, User-Agent, Origin, X-Requested-With, Baggage, Sentry-Trace"
+      "Content-Type, Content-Length, Cookie, Host, User-Agent, Origin, X-Requested-With, Baggage, Sentry-Trace",
     );
 
     res.header("Access-Control-Allow-Origin", "*");
@@ -71,7 +74,7 @@ export const createApp = async (appConfig: AppConfig): Promise<Express> => {
 
   app.use("/api", router);
 
-  app.all("*", (_, res) => {
+  app.all("*splat", (_, res) => {
     res.status(HttpCodes.NotFound).send();
   });
 
@@ -79,7 +82,7 @@ export const createApp = async (appConfig: AppConfig): Promise<Express> => {
     if (err.isAxiosError) {
       logger.error("Axios error occurred", {
         message: err.message,
-        data: err.response?.data
+        data: err.response?.data,
       });
     } else {
       logger.error("Error occurred", err);

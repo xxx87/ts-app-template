@@ -43,12 +43,6 @@ export default [
       parser: tsParser,
       ecmaVersion: 5,
       sourceType: "module",
-
-      parserOptions: {
-        project: ["tsconfig.json", "tsconfig.dev.json"],
-        tsconfigRootDir:
-          "/home/xxx87/development/work/bettor-faster/beteast/translator",
-      },
     },
 
     rules: {
